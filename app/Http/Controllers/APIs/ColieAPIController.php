@@ -76,12 +76,15 @@ class ColieAPIController extends Controller
 
 
                 $status = "Valider_Automatique";
+                if ($request->input("Quantite_avant_traitement") != $request->input("Quantite_apres_traitement")) {
+                    $status = "Pending";
+                }
                 DB::table('suivi_de_tracabilites')->insert([
                     'Reference_colie' => $request->input('reference_colie'),
                     "id_user" => $request->input("user_id"),
                     "id_fournisseur" => $request->input("id_fournisseur"),
                     "created_at" => $request->input("date_de_scan"),
-                    "statut"=>"Valider_Automatique",
+                    "statut"=>$status,
                     "etat"=>"In",
                     "prix"=> $colie->Prix,
                     "Quantite_avant_traitement"=>$request->input("Quantite_apres_traitement"),
