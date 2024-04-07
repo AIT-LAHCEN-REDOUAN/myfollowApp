@@ -42,3 +42,11 @@ Route::post("/NonValider",[ColieAPIController::class,"NonValider"])->middleware(
 Route::post("/Registration",[ColieAPIController::class,"Registration"]);
 
 Route::get("/Stock",[ColieAPIController::class,"get_stock"])->middleware("auth:sanctum");
+
+
+
+Route::get("/All_in",[ColieAPIController::class,"All_in"]);
+Route::get("All_out",[ColieAPIController::class,"All_out"]);
+Route::get("All_retour",[ColieAPIController::class,"All_retour"]);
+Route::get("All_NonValider",[ColieAPIController::class,"All_NonValider"]);
+Route::get("All_Operations",[ColieAPIController::class,"All_operations"]);

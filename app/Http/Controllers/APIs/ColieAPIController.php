@@ -413,4 +413,30 @@ class ColieAPIController extends Controller
         $data= Stock::all();
         return response()->json($data);
     }
+
+    public function All_operations(){
+        $get_op = Suivi_de_tracabilites::with('Fournisseur','destinataire')->orderBy("created_at","desc")->get();
+        return response()->json($get_op);
+    }
+
+    public function All_in(){
+        $get_op = Suivi_de_tracabilites::where("etat","In")->orderBy("created_at","desc")->get();
+        return response()->json($get_op);
+    }
+
+    public function All_out(){
+        $get_op = Suivi_de_tracabilites::where("etat","Out")->orderBy("created_at","desc")->get();
+        return response()->json($get_op);
+    }
+
+    public function All_retour(){
+        $get_op = Suivi_de_tracabilites::where("etat","retour")->orderBy("created_at","desc")->get();
+        return response()->json($get_op);
+    }
+
+    public function All_NonValider(){
+        $get_op = Suivi_de_tracabilites::where("statut","Non_valider")->orderBy("created_at","desc")->get();
+        return response()->json($get_op);
+    }
+
 }

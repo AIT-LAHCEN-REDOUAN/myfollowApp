@@ -366,7 +366,8 @@
                         All NonValider
                     </a>
                 </li>
-                <li class=" items-center px-4" >
+               {{--
+<li class=" items-center px-4" >
                     <a
                         href="{{route('CorrigeNonValider')}}"
                         class="text-xs uppercase py-2 font-bold block {{ request()->is('CorrigeNonValider') ? 'text-red-500' : 'text-blueGray-700' }}  hover:text-pink-600"
@@ -382,6 +383,8 @@
                     Derogé
                     </a>
                 </li>
+
+                --}}
 {{--                <li class=" items-center px-4" >--}}
 {{--                    <a--}}
 {{--                        href="{{route('DerogeNonValider')}}"--}}

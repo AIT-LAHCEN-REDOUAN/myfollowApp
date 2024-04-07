@@ -33,8 +33,13 @@
           <th class='px-4 py-2 text-center'>Nom</th>
           <th class='px-4 py-2 text-center'>email</th>
           <th class='px-4 py-2 text-center'>Telephone</th>
-          <th class='px-4 py-2 text-center'>date Creation</th>
+
+          {{--
+
+ <th class='px-4 py-2 text-center'>date Creation</th>
           <th class='px-4 py-2 text-center'>date Modification</th>
+            --}}
+
           <th class="class='px-4 py-2 text-center" colspan="2" >Action</th>
         </tr>
       </thead>
@@ -46,8 +51,12 @@
           <td class='px-4 py-2 text-center'>{{$item->name}}</td>
           <td class='px-4 py-2 text-center'>{{$item->email}}</td>
           <td class='px-4 py-2 text-center'>{{$item->Telephone}}</td>
-          <td class='px-4 py-2 text-center'>{{$item->created_at}}</td>
+
+          {{--
+ <td class='px-4 py-2 text-center'>{{$item->created_at}}</td>
           <td class='px-4 py-2 text-center'>{{$item->updated_at}}</td>
+            --}}
+
            <td class='px-4 py-2 text-center'>
 <div class="flex">
     @can('Gestion_Client')

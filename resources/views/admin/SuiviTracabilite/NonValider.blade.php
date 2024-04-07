@@ -22,7 +22,10 @@
                 <th class='px-4 py-2 text-center whitespace-nowrap'>Statut</th>
                 <th class='px-4 py-2 text-center whitespace-nowrap'>raison</th>
                 <th class='px-4 py-2 text-center whitespace-nowrap'>Date De Scan</th>
-                <th class="px-4 py-2 text-center" colspan="2" >Action</th>
+              {{--
+<th class="px-4 py-2 text-center" colspan="2" >Action</th>
+
+                --}}
             </tr>
             </thead>
             <tbody>
@@ -38,7 +41,10 @@
                     <td class='px-4 py-2 text-center whitespace-nowrap'>{{$item->statut ?? "---"}}</td>
                     <td class='px-4 py-2 text-center whitespace-nowrap'>{{$item->raison ?? "---"}}</td>
                     <td class='px-4 py-2 text-center whitespace-nowrap'>{{$item->created_at}}</td>
-                    <td class='px-4 py-2 text-center whitespace-nowrap'>
+
+                    {{--
+
+<td class='px-4 py-2 text-center whitespace-nowrap'>
                         <div class="flex">
                             @can('supprimer_operations')
                                 <div class="w-1/2">
@@ -60,6 +66,8 @@
                             @endcan
                         </div>
                     </td>
+                        --}}
+
                 </tr>
             @endforeach
             </tbody>

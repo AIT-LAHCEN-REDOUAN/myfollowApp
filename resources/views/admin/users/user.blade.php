@@ -22,11 +22,7 @@
           <th class='px-4 py-2 text-center'>Matricule</th>
           <th class='px-4 py-2 text-center'>Nom</th>
           <th class='px-4 py-2 text-center'>email</th>
-          <th class='px-4 py-2 text-center'>Ville</th>
-          <th class='px-4 py-2 text-center'>Mot de Passe</th>
           <th class='px-4 py-2 text-center'>Role</th>
-          <th class='px-4 py-2 text-center'>date Creation</th>
-          <th class='px-4 py-2 text-center'>date Modification</th>
           <th class="class='px-4 py-2 text-center" colspan="2" >Action</th>
         </tr>
       </thead>
@@ -34,15 +30,11 @@
         @foreach ($users as $item)
         <tr>
 
-          <td class='px-4 py-2 text-center'><img class="h-auto max-w-full" src="{{asset($item->Image ?? '---')}}" /> </td>
+          <td class='px-4 py-2 text-center'><img style="width: 100px ; height:100px" class="" src="{{asset($item->Image ?? '---')}}" /> </td>
           <td class='px-4 py-2 text-center'>{{$item->Matricule ?? "---"}}</td>
           <td class='px-4 py-2 text-center'>{{$item->name}}</td>
           <td class='px-4 py-2 text-center'>{{($item->email && $item->email != '') ? $item->email : "---"}}</td>
-          <td class='px-4 py-2 text-center'>{{$item->Ville}}</td>
-          <td class='px-4 py-2 text-center'>{{$item->original_password}}</td>
           <td class='px-4 py-2 text-center'>{{$item->role->name ?? 'No Role Assigned'}}</td>
-          <td class='px-4 py-2 text-center'>{{$item->created_at}}</td>
-          <td class='px-4 py-2 text-center'>{{$item->updated_at}}</td>
            <td class='px-4 py-2 text-center'>
                <div class="flex">
                    <div class="w-1/2 ">
