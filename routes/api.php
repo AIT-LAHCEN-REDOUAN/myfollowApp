@@ -50,3 +50,5 @@ Route::get("All_out",[ColieAPIController::class,"All_out"]);
 Route::get("All_retour",[ColieAPIController::class,"All_retour"]);
 Route::get("All_NonValider",[ColieAPIController::class,"All_NonValider"]);
 Route::get("All_Operations",[ColieAPIController::class,"All_operations"]);
+
+Route::post("/Update_Image_Profile",[AuthController::class,"update_Image_Profile"]);
